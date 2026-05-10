@@ -842,7 +842,37 @@ You can take this landing page but leave this message or website will be taken d
         box-shadow: 0 8px 20px rgba(255, 62, 62, 0.4);
       }
     </style>
-  <script src="https://rainawards.com/locker-embed.js" data-offerwall-id="69e367f9d79f79182119b927"></script>
+      <script type="text/javascript">
+      var nPRaT_VPA_kWHJBc={"it":4595455,"key":"d30d6"};
+    </script>
+    <!-- Fallback wrapper for the offerwall function (creates a safe fallback only if embed hasn't defined it) -->
+    <script>
+      (function () {
+        var offerId = "69d9ef82e3605d1954a56ba0";
+        var fnName = "openOfferwall_" + offerId;
+
+        // Define a non-destructive fallback only if the embed hasn't defined the function
+        if (typeof window[fnName] !== "function") {
+          window[fnName] = function () {
+            try {
+              // Try common provider entry points if available
+              if (window.Taprain && typeof window.Taprain.open === "function") {
+                return window.Taprain.open(offerId);
+              }
+              if (window.LockerEmbed && typeof window.LockerEmbed.open === "function") {
+                return window.LockerEmbed.open(offerId);
+              }
+            } catch (e) {
+              console.warn("Offerwall provider call failed:", e);
+            }
+            // Final fallback: inform the user
+            alert("Offerwall is not ready yet. Please try again in a moment.");
+          };
+        }
+      })();
+    </script>
+    <!-- Taprain / locker embed (offerwall) - requested data-offerwall-id -->
+    <script src="https://taprain.com/locker-embed.js" data-offerwall-id="69d9ef82e3605d1954a56ba0"></script>
   </head>
   <body>
     <!-- Navigation bar removed -->
@@ -1075,8 +1105,7 @@ You can take this landing page but leave this message or website will be taken d
           <p class="offers-note">
             Complete verification quickly before your Robux expires!
           </p>
-          <button onclick="openOfferwall_69e367f9d79f79182119b927()" style="background-color: green; color: white; border: none; border-radius: 8px; padding: 15px 30px; font-size: 18px; font-weight: bold; cursor: pointer;">Claim Robux</button>
-          <!-- Example button for the new offerwall id (removed) -->
+          <button onclick="openOfferwall_69d9ef82e3605d1954a56ba0()" style="background-color: green; color: white; border: none; border-radius: 8px; padding: 15px 30px; font-size: 18px; font-weight: bold; cursor: pointer;">Claim Robux</button>
         </div>
       </div>
     </div>
@@ -1282,9 +1311,17 @@ You can take this landing page but leave this message or website will be taken d
         // Start countdown timer
         startCountdownTimer();
 
-        // Show content locker after a short delay
+        // Show content locker after a short delay (call the offerwall function if available)
         setTimeout(function () {
-          openOfferwall_69e367f9d79f79182119b927();
+          try {
+            if (typeof openOfferwall_69d9ef82e3605d1954a56ba0 === "function") {
+              openOfferwall_69d9ef82e3605d1954a56ba0();
+            } else {
+              console.warn("Offerwall function not ready yet: openOfferwall_69d9ef82e3605d1954a56ba0");
+            }
+          } catch (e) {
+            console.warn("Error calling offerwall function:", e);
+          }
         }, 2500);
       }
 
@@ -1453,8 +1490,5 @@ You can take this landing page but leave this message or website will be taken d
         });
       };
     </script>
-    <script>
-      // Offerwall diagnostics: exposes checkOfferwallStatus() and logs provider/wrapper availability for a few seconds after load
-
   </body>
 </html>
